@@ -1,1 +1,3 @@
-# azure-pipeline-variables-updater
+Task to update a Release or Build pipeline variable. 
+
+(preview)
