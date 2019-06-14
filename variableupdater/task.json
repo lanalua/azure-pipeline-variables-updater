@@ -1,8 +1,8 @@
 {
   "id": "1D7B39B7-F346-4DA5-B089-8ADC274F727B",
   "name": "variableupdater",
-  "friendlyName": "Pipeline variable updater",
-  "description": "Build task to update a pipeline variable. Requires 'Allow scripts to access the OAuth token' in agent job additional options.",
+  "friendlyName": "Shared variable updater",
+  "description": "Task to update a variable in a variable group (library).\nRequires 'Allow scripts to access the OAuth token' in agent job additional options and administrator role to 'Project Collection Build Service' in the variable group.",
   "author": "Bruno Grillo ",
   "helpMarkDown": "",
   "category": "Utility",
@@ -16,10 +16,17 @@
     "Patch": "0"
   },
   "minimumAgentVersion": "2.117.0",
-  "instanceNameFormat": "Pipeline variable updater",
+  "instanceNameFormat": "Shared variable updater",
   "groups": [
   ],
   "inputs": [
+    {
+      "name": "VariableGroupId",
+      "label": "Variable group Id",
+      "type": "string",
+      "required": true,
+      "helpMarkDown": "The variable group id."
+    },
     {
       "name": "VariableName",
       "label": "Variable name",

@@ -1,8 +1,8 @@
 {
   "manifestVersion": 1,
   "id": "lanalua-variableupdater",
-  "name": "Pipeline variable updater (preview)",
-  "version": "0.0.1",
+  "name": "Shared variable updater (preview)",
+  "version": "0.0.3",
   "publisher": "lanalua",
   "public": true,
   "targets": [
@@ -26,14 +26,16 @@
     }
   },
   "scope": [
-    "vso.build"
+    "vso.build",
+    "vso.release"
   ],
-  "description": "Build task to update a pipeline variable",
+  "description": "Task to update a variable in a variable group (library).\nRequires 'Allow scripts to access the OAuth token' and administrator role to 'Project Collection Build Service' in the variable group.",
   "categories": [
     "Azure Pipelines"
   ],
   "tags": [
     "Build",
+    "Release",
     "Variable",
     "Pipeline",
     "Azure DevOps"
