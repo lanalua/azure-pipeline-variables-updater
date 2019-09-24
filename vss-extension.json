@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "lanalua-variableupdater",
   "name": "Shared variable updater (preview)",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "publisher": "lanalua",
   "public": true,
   "targets": [
