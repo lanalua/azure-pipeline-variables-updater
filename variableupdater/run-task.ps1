@@ -16,7 +16,7 @@ $variableGroupUri = "$($env:SYSTEM_TEAMFOUNDATIONCOLLECTIONURI)$env:SYSTEM_TEAMP
 $authHeader = @{Authorization = "Bearer $AccessToken"}
 
 Write-Verbose "Variable group URI: $($variableGroupUri)"
-$definition = Invoke-RestMethod -Uri $variableGroupUri -Headers $authHeader
+$definition = Invoke-RestMethod -UseBasicParsing -Uri $variableGroupUri -Headers $authHeader
 Write-Verbose "Variable group = $($definition | ConvertTo-Json -Depth 100)"
 
 if ($definition -and $definition.variables.$VariableName) {
@@ -28,7 +28,7 @@ if ($definition -and $definition.variables.$VariableName) {
     $definitionJson = $definition | ConvertTo-Json -Depth 100 -Compress
 
     Write-Verbose "Updating variable group: $($variableGroupUri)"
-    Invoke-RestMethod -Method Put -Uri $variableGroupUri -Headers $authHeader -ContentType "application/json" -Body ([System.Text.Encoding]::UTF8.GetBytes($definitionJson)) | Out-Null
+    Invoke-RestMethod -UseBasicParsing -Method Put -Uri $variableGroupUri -Headers $authHeader -ContentType "application/json" -Body ([System.Text.Encoding]::UTF8.GetBytes($definitionJson)) | Out-Null
 }
 else {
     Write-Error "The variable group or variable name can not be found, or the 'Project Collection Build Service' doesn't have administrator role in the variable group."
