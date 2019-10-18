@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "lanalua-variableupdater",
-  "name": "Shared variable updater (preview)",
+  "name": "Shared variable updater",
   "version": "1.0.2",
   "publisher": "lanalua",
   "public": true,
