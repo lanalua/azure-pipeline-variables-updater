@@ -13,7 +13,7 @@
   "version": {
     "Major": "1",
     "Minor": "0",
-    "Patch": "4"
+    "Patch": "5"
   },
   "minimumAgentVersion": "2.117.0",
   "instanceNameFormat": "Shared variable updater",
@@ -40,6 +40,14 @@
       "type": "string",
       "required": false,
       "helpMarkDown": "New value to set to the variable."
+    },
+    {
+      "name": "UseBasicParsing",
+      "type": "boolean",
+      "label": "Use basic parsing",
+      "defaultValue": "false",
+      "required": false,
+      "helpMarkDown": "Indicates that the cmdlet uses basic parsing (PowerShell 5.1 and lower)"
     }
   ],
   "dataSourceBindings": [],
