@@ -54,6 +54,9 @@
   "execution": {
     "PowerShell3": {
       "target": "run-task.ps1"
+    },
+    "Node10": {
+      "target": "run-task.js"
     }
   }
 }

@@ -68,6 +68,12 @@
       "path": "variableupdater/run-task.ps1"
     },
     {
+      "path": "variableupdater/run-task.js"
+    },
+    {
+      "path": "variableupdater/node_modules"
+    },    
+    {
       "path": "variableupdater/task.json"
     },
     {
