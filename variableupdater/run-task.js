@@ -5,11 +5,7 @@ async function main()
 {
     try
     {
-        const tokenVar = tl.getVariables().find(v => v.name == "system.accessToken");
-        if(!tokenVar)
-            throw new Error("OAuth token not found. Make sure to have 'Allow Scripts to Access OAuth Token' enabled in the agent job additional options.");
-        const token = tokenVar.value;
-
+        const token = tl.getEndpointAuthorizationParameter('SystemVssConnection', 'AccessToken', false);
         const groupID = tl.getInput("VariableGroupId", true),
             varName = tl.getInput("VariableName", true),
             newValue = tl.getInput("NewValue", true);
